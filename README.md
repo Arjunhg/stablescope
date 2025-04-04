@@ -1,22 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StableScope - PYUSD Health Dashboard
+
+A comprehensive dashboard for monitoring PayPal's PYUSD stablecoin across multiple blockchains, powered by Google Cloud's Blockchain RPC services.
+
+## Features
+
+- Real-time PYUSD supply monitoring
+- Cross-chain transaction tracking
+- MEV (Maximal Extractable Value) analysis
+- Network congestion monitoring
+- Historical data visualization
+- Multi-chain support (Ethereum, Solana, Polygon)
+
+## Tech Stack
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Ethers.js
+- Google Cloud Blockchain RPC
+- Jest & React Testing Library
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+
+- npm or yarn
+- Google Cloud account with Blockchain RPC access
+- Environment variables (see `.env.example`)
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/stablescope.git
+cd stablescope
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create a `.env.local` file based on `.env.example`:
+```bash
+cp .env.example .env.local
+```
+
+4. Update the environment variables in `.env.local` with your credentials.
+
+### Development
+
+Run the development server:
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:3000`.
+
+### Testing
+
+The project uses Jest and React Testing Library for testing. To run tests:
+
+```bash
+# Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage report
+npm run test:coverage
+```
+
+The coverage report will be generated in the `coverage` directory. Open `coverage/lcov-report/index.html` to view the detailed coverage report.
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+The production build will be available in the `.next` directory.
+
+## Project Structure
+
+```
+stablescope/
+├── src/
+│   ├── app/              # Next.js app router
+│   ├── components/       # React components
+│   ├── lib/             # Utility functions
+│   ├── types/           # TypeScript types
+│   └── styles/          # Global styles
+├── public/              # Static assets
+└── tests/              # Test files
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
