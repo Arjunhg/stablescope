@@ -33,8 +33,7 @@ A comprehensive dashboard for monitoring PayPal's PYUSD stablecoin across multip
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/stablescope.git
-cd stablescope
+git clone https://github.com/Arjunhg/stablescope.git
 ```
 
 2. Install dependencies:
